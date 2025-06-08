@@ -1,0 +1,46 @@
+/* Custom list styling with arrows */
+ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 1.25rem 0;
+}
+
+ul li {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 0.8rem;
+    line-height: 1.7;
+}
+
+ul li:before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: #6d4c41; /* Main theme brown color */
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.program-card ul li:before {
+    color: #8d6e63; /* Lighter theme brown for cards */
+}
+
+/* Hover effects */
+ul li:hover {
+    transform: translateX(8px);
+    transition: transform 0.3s ease;
+}
+
+ul li:hover:before {
+    color: #5d4037; /* Darker brown on hover */
+    transform: translateX(5px);
+}
+
+/* Special styling for program cards */
+.program-card ul {
+    margin-left: 0.5rem;
+}
+
+.program-card ul li {
+    padding-left: 2.2rem;
+}
